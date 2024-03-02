@@ -31,5 +31,34 @@
                 }
             }
 
+            public function getDetailClubJoueur(){
+                $detail = "<table border='1px'>
+                                    <thead>
+                                    <tr>
+                                         <th>" . $this->nom . "</th>
+                                         
+                                    </tr>
+                                    </thead>
+                               <tbody>";
+                foreach($this->joueurs as $joueur){
+                     
+                    $detail .= "<tr>
+                    
+                                    <td>" . $joueur->getPrenom() . " " . $joueur->getNom() . " " . $joueur->getSaison() .  "</td>
+        
+                                </tr>";
+                        
+                } 
+                $detail .= "</tbody></table>"; 
+                return $detail;
+           }
+
+          
+
+           public function __toString()
+            {
+                return $this;
+            }
+
 
         }

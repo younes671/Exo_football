@@ -3,6 +3,7 @@
             private $nom;
             private array $clubs;
             private array $joueurs;
+        
 
             public function __construct(string $nom) {
                 $this->nom = $nom;
@@ -27,14 +28,29 @@
                 $this->joueurs[] = $joueurs;
             }
 
-            public function getClubs(){
-                if($this->clubs == 'France')
+            public function getDetailClubPays(){
+                $detail = "<table border='1px'>
+                                    <thead>
+                                    <tr>
+                                         <th>" . $this->nom . "</th>
+                                         
+                                    </tr>
+                                    </thead>
+                               <tbody>";
                 foreach($this->clubs as $club){
+                     
+                    $detail .= "<tr>
+                    
+                                    <td>" . $club->getNom() . "</td>
+        
+                                </tr>";
+                        
+                } 
+                $detail .= "</tbody></table>"; 
+                return $detail;
+           }
 
-                    return $this;
-                    $club['nom'];
-                }
-            }
+           
 
             public function __toString()
             {

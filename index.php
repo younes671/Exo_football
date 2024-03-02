@@ -31,7 +31,22 @@ $joueur5 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1, $equipe7, 2018)
 
 
 
-echo 
-$pays3->getClubs();
+echo $pays4->getDetailClubPays();
+echo $pays1->getDetailClubPays();
+echo $pays2->getDetailClubPays();
+echo $pays3->getDetailClubPays();
+
+echo $equipe1->getDetailClubJoueur();
+echo $equipe2->getDetailClubJoueur();
+echo $equipe3->getDetailClubJoueur();
+echo $equipe4->getDetailClubJoueur();
+echo $equipe5->getDetailClubJoueur();
+echo $equipe6->getDetailClubJoueur();
+echo $equipe7->getDetailClubJoueur();
+echo $equipe8->getDetailClubJoueur();
+echo $equipe9->getDetailClubJoueur();
+
+
+
 
 
