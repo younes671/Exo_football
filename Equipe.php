@@ -3,17 +3,23 @@
             private string $nom;
             private array $joueurs;
             private Pays $pays;
+           
 
             public function __construct(string $nom, Pays $pays) {
                 $this->nom = $nom;
                 $this->pays = $pays;
                 $this->pays->addClubs($this);
                 $this->joueurs = [];
+               
 
             }
 
             public function getNom() {
                 return $this->nom;
+            }
+
+            public function getPays() {
+                return $this->pays;
             }
 
             public function setNom($nom) {
@@ -53,7 +59,8 @@
                 return $detail;
            }
 
-          
+        
+
 
            public function __toString()
             {

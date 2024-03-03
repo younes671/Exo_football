@@ -6,7 +6,8 @@
                 private Pays $pays;
                 private Equipe $equipe;
                 private $annee_saison;
-                private array $clubs;
+                private array $equipes = [];
+                
 
 
                 public function __construct(string $nom, string $prenom, string $date_naissance, Pays $pays, Equipe $equipe, int $annee_saison) {
@@ -19,7 +20,7 @@
                     $this->equipe->addJoueur($this);
                     $this->pays->addJoueurs($this);
                     $this->equipe = $equipe;
-                    $this->clubs = [];
+                    
                 }
 
                 public function getNom() {
@@ -40,6 +41,10 @@
 
                 public function getSaison() {
                     return $this->annee_saison;
+                }
+
+                public function getPays() {
+                    return $this->pays;
                 }
     
                 public function setNom($nom) {
@@ -62,9 +67,15 @@
                     return $this->annee_saison = $annee_saison;
                 }
 
-                public function addClubs(Equipe $clubs){
-                    $this->clubs[] = $clubs;
+                public function addEquipe(Equipe $equipe) {
+                    $this->equipes[] = $equipe;
                 }
+            
+                public function getEquipes(): array {
+                    return $this->equipes;
+                }
+
+               
 
                 public function __toString()
                 {

@@ -50,6 +50,16 @@
                 return $detail;
            }
 
+           public function getlistJoueur(){
+            foreach($this->joueurs as $joueur){
+                $detail = $joueur->getPrenom() . " " . $joueur->getNom() . "<br>" . $this . " ";
+               
+                 
+            }
+           return $detail;
+            
+           }
+
            
 
             public function __toString()
