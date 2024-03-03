@@ -6,7 +6,7 @@
                 private Pays $pays;
                 private Equipe $equipe;
                 private $annee_saison;
-                private array $equipes = [];
+                
                 
 
 
@@ -19,7 +19,7 @@
                     $this->annee_saison = $annee_saison;
                     $this->equipe->addJoueur($this);
                     $this->pays->addJoueurs($this);
-                    $this->equipe = $equipe;
+                    
                     
                 }
 
@@ -65,14 +65,6 @@
 
                 public function setSaison($annee_saison) {
                     return $this->annee_saison = $annee_saison;
-                }
-
-                public function addEquipe(Equipe $equipe) {
-                    $this->equipes[] = $equipe;
-                }
-            
-                public function getEquipes(): array {
-                    return $this->equipes;
                 }
 
                

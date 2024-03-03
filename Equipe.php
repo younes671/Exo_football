@@ -59,6 +59,13 @@
                 return $detail;
            }
 
+           public function getListClub(){
+            foreach($this->joueurs as $joueur){
+                $joueur->getPays();
+            }
+            return $joueur;
+           }
+
         
 
 

@@ -60,6 +60,14 @@
             
            }
 
+           public function getPlay(){
+                foreach($this->joueurs as $joueur){
+                  $joueur->getEquipe();
+                    
+                }
+                return $joueur;
+           }
+
            
 
             public function __toString()

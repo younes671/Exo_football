@@ -25,7 +25,7 @@ $joueur1 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1, $equipe1, 2021)
 $joueur2 = new Joueur("Kroos", "Toni", "04-01-1990", $pays2, $equipe2, 2014);
 $joueur3 = new Joueur("Iniesta", "Andres", "11-05-1984", $pays3, $equipe3, 2018);
 $joueur4 = new Joueur("Lampard", "Franck", "20-06-1978", $pays4, $equipe3, 2014);
-$joueur1 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1, $equipe7, 2018);
+$joueur5 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1, $equipe7, 2018);
 
 
 
@@ -48,6 +48,6 @@ echo $equipe9->getDetailClubJoueur();
 
 
 // echo $pays1->getlistJoueur();
-var_dump($pays1->getlistJoueur());
+var_dump($pays1->getPlay());
 
 
