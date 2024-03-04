@@ -58,4 +58,10 @@ li{
 
 main {
     display: flex;
+    flex-direction: column;
+}
+
+.pays{
+    display: flex;
+    justify-content: center;
 }

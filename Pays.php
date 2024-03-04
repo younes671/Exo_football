@@ -32,9 +32,9 @@
                 $detail =    $this->nom;
                 foreach($this->clubs as $club){
                     $detail .= '<ul><li>' . $club->getNom() . '</li></ul>';    
+                   
                } 
-                return $detail;
-                echo "</div>";
+                return $detail. "</div>";
            }
 
            public function getlistJoueur(){

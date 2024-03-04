@@ -42,38 +42,43 @@
     $carriere1 = new Carriere(2021, $equipe1, $joueur1);
     $carriere2 = new Carriere(2018, $equipe7, $joueur1);
     $carriere3 = new Carriere(2018, $equipe1, $joueur3);
+?>
 
-
-    echo "<div class='pays'>";
-    echo "<div class='index'>";
-    echo $pays4->getDetailClubPays();
-    echo "</div>";
-    echo "<div class='index'>";
-    echo $pays3->getDetailClubPays();
-    echo "</div>";
-    echo "<div class='index'>";
-    echo $pays1->getDetailClubPays() . "</div></div>";
+    <span class='pays'>
+    <div class='index'> 
+    <?php
+    echo $pays4->getDetailClubPays();?>
+    </div>
+    <div class='index'>
+    <?php
+    echo $pays3->getDetailClubPays();?>
+    </div>
+    <div class='index'>
+    <?php
+    echo $pays1->getDetailClubPays() ?>
+    </div></span>
    
 
 
-    echo "<div class='club'>";
-    echo "<div class='index'>";
-    echo $equipe1->getCarriereEquipe();
-    echo "</div>";
-    echo "</div>";
+    <span class='club'>
+    <div class='index'>
+    <?php
+    echo $equipe1->getCarriereEquipe();?>
+    </div>
+</span>
 
-    // echo $equipe1->getListCarriereClub();
-    // echo $equipe7->getListCarriereClub();
-    echo "<div class='joueur'>";
-    echo "<div class='index'>";
-    echo $joueur1->getCarriereJoueur();
-    echo "</div>";
-    echo "</div>";
+    
+    <div class='joueur'>
+    <div class='index'>
+    <?php
+    echo $joueur1->getCarriereJoueur();?>
+    </div>
+    </div>
 
     
 
  
-    ?>
+    
 
   
     </main>

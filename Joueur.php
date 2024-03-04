@@ -69,8 +69,8 @@
                  foreach($this->carrieres as $carriere){
                       $result .= '<ul><li>' . $carriere->getClub() . "</li><li>" . $carriere->getSaison() . '</li></ul>';
                  }
-                 return $result;
-                 echo "</div>";
+                 return $result . "</div>";
+                 
              }
  
                
