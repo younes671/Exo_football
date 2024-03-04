@@ -35,7 +35,7 @@
 
         public function __toString()
         {
-            return $this;
+            return $this->saison;
         }
 
     }

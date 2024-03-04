@@ -1,0 +1,61 @@
+
+
+.index{
+    display: flex;
+    justify-content: space-around;
+  
+}
+
+
+li{
+    display: block;
+    
+}
+
+.carte-pays{
+    display: flex;
+    border: 10px;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+    justify-content: center;
+    background: red;
+    color: white;
+    margin: 15px;
+    padding: 20px;
+}
+
+.carte-joueur{
+    display: flex;
+    border: 10px;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+    justify-content: center;
+    background: green;
+    color: white;
+    margin: 15px;
+    padding: 20px;
+}
+
+.carte-club{
+    display: flex;
+    border: 20px;
+    justify-content: center;
+     flex-direction: column;
+     width: 200px;
+     height: 350px;
+     justify-content: center;
+     background: blue;
+     color: white;
+     margin: 15px;
+     padding: 20px;
+}
+
+main {
+    display: flex;
+}

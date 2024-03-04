@@ -31,18 +31,20 @@
                 $this->carrieres[] = $carrieres;
             }
 
-            public function getListCarriereClub(){
-                   echo $this->nom;
-                foreach($this->carrieres as $carriere){
-                     $result = $carriere;
-                }
-                return $result;
-            }
+            public function getCarriereEquipe(){
+                echo '<div class="carte-club">' . $this->nom;
+                $result = "";
+             foreach($this->carrieres as $carriere){
+                  $result .= '<ul><li>' . $carriere->getJoueur() . "</li><li>" . $carriere->getSaison() . '</li></ul>';
+             }
+             return $result;
+             echo "</div>";
+         }
 
 
            public function __toString()
             {
-                return $this;
+                return $this->nom;
             }
 
 

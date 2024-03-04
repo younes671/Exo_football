@@ -28,25 +28,13 @@
             }
 
             public function getDetailClubPays(){
-                $detail = "<table border='1px'>
-                                    <thead>
-                                    <tr>
-                                         <th>" . $this->nom . "</th>
-                                         
-                                    </tr>
-                                    </thead>
-                               <tbody>";
+               echo '<div class="carte-pays">';
+                $detail =    $this->nom;
                 foreach($this->clubs as $club){
-                     
-                    $detail .= "<tr>
-                    
-                                    <td>" . $club->getNom() . "</td>
-        
-                                </tr>";
-                        
-                } 
-                $detail .= "</tbody></table>"; 
+                    $detail .= '<ul><li>' . $club->getNom() . '</li></ul>';    
+               } 
                 return $detail;
+                echo "</div>";
            }
 
            public function getlistJoueur(){
@@ -72,7 +60,7 @@
 
             public function __toString()
             {
-                return $this;
+                return $this->nom;
             }
 
         }

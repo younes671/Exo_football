@@ -64,16 +64,18 @@
                 }
 
                 public function getCarriereJoueur(){
-                    // echo $this->prenom . " " . $this->nom;
+                    echo '<div class="carte-joueur">' . $this->prenom . " " . $this->nom;
+                    $result = "";
                  foreach($this->carrieres as $carriere){
-                      $result = $carriere;
+                      $result .= '<ul><li>' . $carriere->getClub() . "</li><li>" . $carriere->getSaison() . '</li></ul>';
                  }
                  return $result;
+                 echo "</div>";
              }
  
                
                 public function __toString()
                 {
-                    return $this->prenom . " " . $this->nom ;
+                    return $this->prenom." ".$this->nom;
                 }
         }
