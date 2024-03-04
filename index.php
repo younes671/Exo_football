@@ -11,6 +11,8 @@ $pays2 = new Pays("Allemagne");
 $pays3 = new Pays("Espagne");
 $pays4 = new Pays("Angleterre");
 
+
+
 $equipe1 = new Equipe("RCSA", $pays1);
 $equipe2 = new Equipe("Réal Madrid", $pays3);
 $equipe3 = new Equipe("Barcelone", $pays3);
@@ -21,11 +23,13 @@ $equipe7 = new Equipe("Valence", $pays3);
 $equipe8 = new Equipe("Manchester City", $pays4);
 $equipe9 = new Equipe("Liverpool", $pays4);
 
-$joueur1 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1, $equipe1, 2021);
-$joueur2 = new Joueur("Kroos", "Toni", "04-01-1990", $pays2, $equipe2, 2014);
-$joueur3 = new Joueur("Iniesta", "Andres", "11-05-1984", $pays3, $equipe3, 2018);
-$joueur4 = new Joueur("Lampard", "Franck", "20-06-1978", $pays4, $equipe3, 2014);
-$joueur5 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1, $equipe7, 2018);
+$joueur1 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1);
+$joueur2 = new Joueur("Kroos", "Toni", "04-01-1990", $pays2);
+$joueur3 = new Joueur("Iniesta", "Andres", "11-05-1984", $pays3);
+$joueur4 = new Joueur("Lampard", "Franck", "20-06-1978", $pays4);
+$joueur1 = new Joueur("Gameiro", "Kévin", "09-05-1987", $pays1);
+
+$carriere1 = new Carriere(2018, $equipe1, $joueur1);
 
 
 
@@ -36,18 +40,26 @@ echo $pays1->getDetailClubPays();
 echo $pays2->getDetailClubPays();
 echo $pays3->getDetailClubPays();
 
-echo $equipe1->getDetailClubJoueur();
-echo $equipe2->getDetailClubJoueur();
-echo $equipe3->getDetailClubJoueur();
-echo $equipe4->getDetailClubJoueur();
-echo $equipe5->getDetailClubJoueur();
-echo $equipe6->getDetailClubJoueur();
-echo $equipe7->getDetailClubJoueur();
-echo $equipe8->getDetailClubJoueur();
-echo $equipe9->getDetailClubJoueur();
+echo $equipe1->getListCarriereClub();
+
+echo $joueur1->getCarriereJoueur();
+
+echo "<pre>";
+print_r($joueur1->getCarriereJoueur());
+
+// echo $carriere1-> getListeClub();
+
+// echo $equipe1->getDetailClubJoueur();
+// echo $equipe2->getDetailClubJoueur();
+// echo $equipe3->getDetailClubJoueur();
+// echo $equipe4->getDetailClubJoueur();
+// echo $equipe5->getDetailClubJoueur();
+// echo $equipe6->getDetailClubJoueur();
+// echo $equipe7->getDetailClubJoueur();
+// echo $equipe8->getDetailClubJoueur();
+// echo $equipe9->getDetailClubJoueur();
 
 
-// echo $pays1->getlistJoueur();
-var_dump($pays1->getPlay());
+
 
 

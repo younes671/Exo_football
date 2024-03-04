@@ -1,17 +1,17 @@
 <?php
         class Equipe{
             private string $nom;
-            private array $joueurs;
             private Pays $pays;
+            private array $carrieres;
+            
+            
            
 
             public function __construct(string $nom, Pays $pays) {
                 $this->nom = $nom;
                 $this->pays = $pays;
                 $this->pays->addClubs($this);
-                $this->joueurs = [];
-               
-
+                $this->carrieres = [];
             }
 
             public function getNom() {
@@ -22,51 +22,22 @@
                 return $this->pays;
             }
 
+
             public function setNom($nom) {
                 return $this->nom = $nom;
             }
-
-            public function addJoueur(Joueur $joueurs){
-                $this->joueurs[] = $joueurs;
+        
+            public function addEquipes( Carriere $carrieres){
+                $this->carrieres[] = $carrieres;
             }
 
-            public function getJoueur()
-            {
-                foreach($this->joueurs as $joueur){
-                    return $joueur;
+            public function getListCarriereClub(){
+                   echo $this->nom;
+                foreach($this->carrieres as $carriere){
+                     $result = $carriere;
                 }
+                return $result;
             }
-
-            public function getDetailClubJoueur(){
-                $detail = "<table border='1px'>
-                                    <thead>
-                                    <tr>
-                                         <th>" . $this->nom . "</th>
-                                         
-                                    </tr>
-                                    </thead>
-                               <tbody>";
-                foreach($this->joueurs as $joueur){
-                     
-                    $detail .= "<tr>
-                    
-                                    <td>" . $joueur->getPrenom() . " " . $joueur->getNom() . " " . $joueur->getSaison() .  "</td>
-        
-                                </tr>";
-                        
-                } 
-                $detail .= "</tbody></table>"; 
-                return $detail;
-           }
-
-           public function getListClub(){
-            foreach($this->joueurs as $joueur){
-                $joueur->getPays();
-            }
-            return $joueur;
-           }
-
-        
 
 
            public function __toString()

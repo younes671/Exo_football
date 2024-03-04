@@ -7,7 +7,6 @@
 
             public function __construct(string $nom) {
                 $this->nom = $nom;
-
                 $this->clubs = [];
                 $this->joueurs = [];
             }
@@ -60,13 +59,14 @@
             
            }
 
-           public function getPlay(){
-                foreach($this->joueurs as $joueur){
-                  $joueur->getEquipe();
+        //    public function getPlay(){
+           
+        //         foreach($this->joueurs as $joueur){
+        //         echo $joueur; 
                     
-                }
-                return $joueur;
-           }
+        //         }
+        //         return $joueur;
+        //    }
 
            
 
